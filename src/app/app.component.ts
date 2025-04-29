@@ -7,6 +7,9 @@ import { NaviComponent } from './components/navi/navi.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ProductService   } from './services/product.service';
 import { CategoryService   } from './services/category.service';
+import { RouterModule } from '@angular/router';
+import { VatAddedPipe } from './pipes/vat-added.pipe';
+import { FormsModule } from "@angular/forms";
 
 
 
@@ -14,7 +17,7 @@ import { CategoryService   } from './services/category.service';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, CommonModule, ProductComponent, CategoryComponent, NaviComponent, HttpClientModule],
+  imports: [RouterOutlet, CommonModule, ProductComponent, CategoryComponent, NaviComponent, HttpClientModule,RouterModule,VatAddedPipe,FormsModule],
   providers: [ProductService,CategoryService],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
