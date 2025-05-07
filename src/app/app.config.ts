@@ -10,10 +10,14 @@ import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
+
 export const appConfig: ApplicationConfig = {
   providers: [
     provideRouter(routes),
     provideClientHydration(),
-    importProvidersFrom(BrowserAnimationsModule,ToastrModule.forRoot()) // ✅ Eklenmesi gereken satır
+    importProvidersFrom(BrowserAnimationsModule,ToastrModule.forRoot())
+    
+    
   ]
+  
 };
